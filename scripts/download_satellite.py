@@ -44,3 +44,27 @@ print(image.get("PRODUCT_ID").getInfo())
 
 print("\nCloud Percentage:")
 print(image.get("CLOUDY_PIXEL_PERCENTAGE").getInfo())
+
+# -----------------------------
+# SELECT RGB BANDS
+# -----------------------------
+rgb_image = image.select(["B4", "B3", "B2"])
+
+# -----------------------------
+# EXPORT TO GOOGLE DRIVE
+# -----------------------------
+task = ee.batch.Export.image.toDrive(
+    image=rgb_image,
+    description="Bhopal_Field_Image",
+    folder="Crop_Infestation_AI",
+    fileNamePrefix="field_image",
+    region=roi,
+    scale=10,
+    maxPixels=1e13,
+    fileFormat="GeoTIFF"
+)
+
+task.start()
+
+print("\nExport started successfully!")
+print("Check Google Drive → Crop_Infestation_AI folder.")
