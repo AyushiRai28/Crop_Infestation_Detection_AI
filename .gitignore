@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Large data
+data/raw/*.tif
+data/raw/*.zip
+
+# Model checkpoints
+*.h5
+*.pt
+*.pth
