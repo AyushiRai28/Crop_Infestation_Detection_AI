@@ -5,10 +5,7 @@ import geemap
 ee.Initialize(project="crop-infestation-ai")
 
 # Same area used earlier
-roi = ee.Geometry.Rectangle([
-    77.35, 23.02,
-    77.40, 23.07
-])
+roi = ee.Geometry.Rectangle([77.07, 23.17, 77.12, 23.22])
 
 # Load Sentinel-2
 collection = (

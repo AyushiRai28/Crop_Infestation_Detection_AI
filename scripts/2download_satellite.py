@@ -10,7 +10,7 @@ ee.Initialize(project=PROJECT_ID)
 # REGION OF INTEREST (ROI)
 # -----------------------------
 # Small agricultural area near Bhopal
-roi = ee.Geometry.Rectangle([77.30, 23.15, 77.40, 23.25])
+roi = ee.Geometry.Rectangle([77.05, 23.15, 77.15, 23.25])
 
 # -----------------------------
 # LOAD SENTINEL-2 DATA
