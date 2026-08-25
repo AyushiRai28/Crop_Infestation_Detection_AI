@@ -109,7 +109,7 @@ if st.button("🔍 Predict Crop Condition", use_container_width=True):
             with result_col1:
                 if prediction == "Healthy":
                     st.success(
-                        f"🌱 Crop Condition: {prediction}"
+                        f"Crop Condition: {prediction}"
                     )
                 else:
                     st.warning(
